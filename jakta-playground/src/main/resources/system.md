@@ -50,6 +50,7 @@ Always format newly invented admissible goals and beliefs as:
 ## Constraints
 - Use FOL syntax with no quantifiers
 - Be as general and minimal as possible
+- A plan takes one step and adopts its goal again (`achieve` the same goal as its last operation) until the goal holds: write one plan per situation, with conditions that say when it applies, including a plan for when the goal already holds, and make sure each step brings the agent closer to the goal
 - Use variables instead of constants where appropriate
 - Reuse patterns across plans
 - Cannot invent new admissible actions
