@@ -68,3 +68,17 @@ tasks.register<JavaExec>("runDomesticRobot") {
     classpath = sourceSets.main.get().runtimeClasspath
     mainClass = "${project.group}.playground.domesticrobot.DomesticRobotRunnerKt"
 }
+
+// Added for the ASTRA comparison (my-planning-trials, JaKtA comparison stage 2): runs a ported task
+tasks.register<JavaExec>("runPort") {
+    val keystoreFile = project.rootProject.file(".env")
+    val properties = Properties()
+    properties.load(keystoreFile.inputStream())
+
+    environment = mapOf("API_KEY" to properties.getProperty("API_KEY"))
+    description = "Run one of the tasks ported from ASTRA's planning trials."
+    group = "application"
+
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass = "${project.group}.playground.ports.PortExperimentKt"
+}

@@ -1,0 +1,3 @@
+[
+ "```yaml\nEVENT: achieve serve(Drink, Person)\nCONDITIONS:\n  - <none>\nOPERATIONS:\n  - execute boil()\n  - execute take(teabag)\n  - execute putInCup(teabag)\n  - execute pour()\n  - execute serve(Person)\n```\n```yaml\n- <none>\n```"
+]

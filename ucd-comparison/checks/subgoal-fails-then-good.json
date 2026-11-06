@@ -1,0 +1,4 @@
+[
+ "```yaml\nEVENT: achieve serve(Drink, Person)\nCONDITIONS:\n  - <none>\nOPERATIONS:\n  - achieve make_tea(Drink)\n  - execute serve(Person)\n---\nEVENT: achieve make_tea(Drink)\nCONDITIONS:\n  - <none>\nOPERATIONS:\n  - execute pour()\n```\n```yaml\n- goal: `make_tea(X)`\n  purpose: the drink X is made in the cup\n```",
+ "```yaml\nEVENT: achieve make_tea(Drink)\nCONDITIONS:\n  - <none>\nOPERATIONS:\n  - execute boil()\n  - execute take(teabag)\n  - execute putInCup(teabag)\n  - execute pour()\n```\n```yaml\n- <none>\n```"
+]
